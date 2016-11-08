@@ -9,15 +9,11 @@ class ImageGalleryViewCell: UICollectionViewCell {
     super.init(frame: frame)
 
     for view in [imageView, selectedImageView] {
-      view.contentMode = .scaleAspectFill
+      view.contentMode = .ScaleAspectFill
       view.translatesAutoresizingMaskIntoConstraints = false
       view.clipsToBounds = true
       contentView.addSubview(view)
     }
-
-    isAccessibilityElement = true
-    accessibilityLabel = "Photo"
-
     setupConstraints()
   }
 
@@ -27,7 +23,7 @@ class ImageGalleryViewCell: UICollectionViewCell {
 
   // MARK: - Configuration
 
-  func configureCell(_ image: UIImage) {
+  func configureCell(image: UIImage) {
     imageView.image = image
   }
 }
